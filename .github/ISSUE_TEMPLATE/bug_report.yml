@@ -1,0 +1,82 @@
+name: Bug report
+description: Report a defect in adt-http2rfc-tunnel
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report.
+        Please fill out the sections below so we can reproduce the problem quickly.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One- or two-sentence description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, ordered steps that reliably trigger the issue.
+      placeholder: |
+        1. Start the server with `...`
+        2. Send `curl ...`
+        3. Observe `...`
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include relevant log lines and stack traces.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Project version
+      placeholder: "0.1.0-SNAPSHOT or commit SHA"
+    validations:
+      required: true
+
+  - type: input
+    id: java
+    attributes:
+      label: Java version (output of `java -version`)
+    validations:
+      required: true
+
+  - type: input
+    id: jco
+    attributes:
+      label: SAP JCo version
+      placeholder: "3.1.10"
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Anything else that may help (config, network topology, screenshots).
+    validations:
+      required: false
